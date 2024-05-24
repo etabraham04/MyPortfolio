@@ -1,0 +1,85 @@
+html
+
+    head
+        title Account
+        link(rel='stylesheet', href='/styles/account.css')
+        
+    body
+        include ../partials/header
+        
+        #user
+            h2 #{user.username}
+            if !myAccount
+                button(id="follow" onclick=`follow('${user._id}')`) #{following ? "Unfollow" : "Follow"}
+        .container
+            #workshops
+                h3 Workshops
+                ul
+                    each workshop in workshops
+                        li
+                            p #{workshop.title}
+                                if !myAccount && !(workshop.participants.includes(myAccountID.toString()))
+                                    button(onclick=`joinWorkshop('${workshop._id}')`) Join Workshop
+                                else if !myAccount && (workshop.participants.includes(myAccountID.toString()))
+                                    button(onclick=`leaveWorkshop('${workshop._id}')`) Leave Workshop
+                                else if myAccount
+                                    button(onclick=`removeWorkshop('${workshop._id}')`) Remove Workshop
+                if myAccount
+                    h4 Enrolled Workshops
+                    ul
+                        each workshop in enrolledWorkshops
+                            li
+                                p #{workshop.title}
+                                button(onclick=`leaveWorkshop('${workshop._id}')`) Leave Workshop
+
+                if myAccount && role == "artist"
+                    input(type="text", id="workshopName", placeholder="Workshop Name")
+                    button(id="addWorkshop" onclick='addWorkshop()') Add Workshop
+
+            #following
+                h3 Following: #{user.following.length}
+                ul
+                    each person in user.following
+                        li
+                            a(href=`/account/${person.id}`) #{person.username}
+
+            #followers
+                h3 Followers: #{user.followers.length}
+                ul
+                    each person in user.followers
+                        li
+                            a(href=`/account/${person.id}`) #{person.username}
+
+            #likes 
+                h3 Likes: #{user.likes.length}
+                ul
+                    each art in likedArtwork
+                        li
+                            a(href=`/artworks/${art._id}`) #{art.Title} 
+                            button(class='like',id=`like_${art._id}` onclick=`like('${art._id}')`) Dislike
+
+            #reviews 
+                h3 Reviews: #{user.reviews.length}
+                ul
+                    each review in user.reviews
+                        li
+                            a(href=`/artworks/${review.artworkid}`) 
+                                h3 #{review.Title}
+                            p #{review.review}
+                            if myAccount
+                                button(id=`remove${review.id}` onclick=`removeReview('${review.artworkid}')` ) Remove
+
+            #accounttype
+                h3 Account Type: #{role}
+                if myAccount
+                    button(id="switch" onclick='switchAccount()') Switch to #{`${role == "artist" ? "Patron" : "Artist"}`}
+            #artwork
+                h3 Number of Artworks: #{Object.keys(user.artworks).length}
+                if myAccount
+                    button(id="addArtwork" onclick='window.location.href=\'/artworks/new\'' style=`display:${role == "artist" ? "inline-block" : "none"};`) Add Artwork
+
+        include ../partials/artworks 
+
+        include ../partials/footer
+
+    script(src='/scripts/account.js')

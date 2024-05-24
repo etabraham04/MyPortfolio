@@ -1,0 +1,12 @@
+#footer{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#footer p{
+    text-align: center;
+    border-top: black solid 1px;
+    padding: 25px;
+
+    font-family: 'Courier New', Courier, monospace;
+}

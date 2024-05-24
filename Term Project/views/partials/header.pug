@@ -1,0 +1,22 @@
+link(rel='stylesheet', href='/styles/header.css')
+
+#headerContainer 
+    #header  
+        a(href="/") Home 
+        #searchDiv
+            input(type="text", id="search", placeholder="Search...")
+            button(id="searchButton" onclick='search()') Search
+
+        #accountDiv
+            button(id="myAccount" onclick='accountRedir()')
+                if loggedIn
+                    | My Account
+                    button(id="logout" onclick='logout()') Logout
+                else
+                    | Login
+            button(id="notification" onclick='showNotifications()' style=`display:${loggedIn ? "inline-block" : "none"};`) Notifications
+
+        #notifications
+
+
+script(src='/scripts/header.js')

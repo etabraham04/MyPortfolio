@@ -1,0 +1,12 @@
+html 
+    head 
+        title Error
+        link(rel='stylesheet', href='/css/error.css')
+
+    body
+        h1 Sorry, it seems you've escaped our site 
+        p click 
+            a(href='/home') here
+            |  to go back to the home page
+
+        p Cause: #{error}

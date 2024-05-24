@@ -1,0 +1,28 @@
+html 
+    head 
+        title New Art
+    
+    link(rel='stylesheet', href='/styles/new-art.css')
+    script(src="/scripts/new-art.js")
+
+    body
+        include ../partials/header
+        h1 Add New Artwork
+        #form
+            div
+                input(type="text" id="title" placeholder="Title")
+            div 
+                input(type="text" id="year" placeholder="Year")
+            div 
+                input(type="text" id="category" placeholder="Category")
+            div
+                input(type="text" id="medium" placeholder="Medium")
+            div
+                input(type="text" id="description" placeholder="Description")
+            div
+                input(type="text" id="poster" placeholder="Image URL")
+            div
+                button(type="submit" onclick='submit()' id='submit') Submit
+        #formErrors
+
+        include ../partials/footer

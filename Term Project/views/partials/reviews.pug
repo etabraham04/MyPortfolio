@@ -1,0 +1,19 @@
+#reviews
+    h2 Reviews
+    each review in art.Reviews
+        div(id=`${review.id}`)
+            a(href=`/account/${review.userid}`)
+                h3#account #{review.username}: 
+            p #{review.review}
+            if userId === review.userid
+                button(id=`remove${review.id}` onclick=`removeReview('${art._id}')` ) Remove
+
+#addReview
+    if !reviewed && !myArtpiece
+        h3 Add Review
+        #form
+            input(type='text',id='newReview',name='review', placeholder='review')
+            button(id="addReview" onclick=`addReview('${art._id}')`) Add Review
+
+link(rel="stylesheet", href="/styles/reviews.css")
+script(src='/scripts/reviews.js')

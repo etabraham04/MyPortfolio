@@ -1,0 +1,22 @@
+
+link(rel="stylesheet", href="/styles/artworks.css")
+
+h2 Artworks
+#artworks
+    each art in artworks 
+        #poster
+            a(href=`/artworks/${art._id}`)
+                img(src=`${art.Poster}`, alt=`${art.title}`)
+            
+            #sidebar
+                if !myAccount && !(myArtworks.includes(art._id)) 
+                    button(class='like',id=`like_${art._id}` onclick=`like('${art._id}')`) 
+                        if (myLikes.includes(art._id))
+                            | Dislike
+                        else
+                            | Like
+                        Like
+                a(href=`/artworks/${art._id}#addReview`)
+                    button Reviews
+
+script(src='/scripts/artworks.js')

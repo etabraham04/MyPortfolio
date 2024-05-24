@@ -1,0 +1,54 @@
+#reviews h2{
+    font-size: 2.5em;
+    width: 100%;
+    font-weight: bold;
+    margin: 20px;
+    border-bottom: #000 solid 1px;
+    padding: 0;
+    text-align: center;
+    color: #000;;
+}
+
+#addReview h3{
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: bold;
+    margin: 20px;
+    border-bottom: none;
+    padding: 0;
+    text-align: center;
+    color: #000;;
+}
+
+#account{
+    font-size: 1.1em;
+    width: 100%;
+    font-weight: bold;
+    margin: 20px;
+    border-bottom: none;
+    padding: 0;
+    text-align: center;
+    color: #000;
+}
+
+#reviews div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-bottom: #000 solid 1px;
+    padding: 0;
+    text-align: center;
+    color: #000;
+}
+
+#reviews div p{
+    font-size: 1em;
+    width: 100%;
+    margin: 20px;
+    border-bottom: none;
+    padding: 0;
+    text-align: center;
+    color: #000;
+}

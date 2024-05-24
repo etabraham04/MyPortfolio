@@ -1,0 +1,27 @@
+html
+
+    head
+        title Search
+        link(rel='stylesheet', href='/styles/search.css')
+        
+    body
+        include ../partials/header
+
+        #search-results
+            h1 Search Results
+            p Showing page #{page} of #{maxPages} 
+            p (#{artworks.length} results of #{totalResults})
+            br
+            #buttons
+                if page > 1
+                    a(href=`/search?query=${search}&page=${page - 1}`)
+                        button Previous Page 
+                if page < maxPages
+                    a(href=`/search?query=${search}&page=${page + 1}`)
+                        button Next Page
+            ul
+                each art in artworks 
+                    li
+                        a(href=`/artworks/${art._id}`) #{art.Title} by #{art.Artist} [#{art.Category}]
+
+        include ../partials/footer

@@ -1,0 +1,41 @@
+html
+    head
+        title My Account
+    
+    link(rel='stylesheet', href='/styles/gallery.css')
+    
+    body(onload=`load('${art._id}')`)
+
+        include ../partials/header
+
+        #gallery 
+
+            h3 #{art.Title} 
+            a(href=`/account/art/${art._id}`) 
+                h4 by: #{art.Artist}
+            a(href=`/search/category?query=${art.Category}&page=1`) 
+                h4 Category: #{art.Category}
+            #poster 
+                img(src=`${art.Poster}`)
+                #sidebar
+                    p 
+                        strong Likes: 
+                        | #{art.Likes.length}
+                        
+                    if !myArtpiece
+                        button(class='like',id=`like_${art._id}` onclick=`like('${art._id}')`) Like
+                    p 
+                        strong Medium: 
+                        | #{art.Medium}
+                    p 
+                        strong Description: 
+                        | #{art.Description}
+
+            include ../partials/reviews
+
+        include ../partials/footer
+
+    script(src='/scripts/gallery.js')
+
+        
+            
