@@ -5,9 +5,9 @@
 
 # Purpose
 
--   To simulate the hollow like assignment 1 but with stuctures, memory allocation and client-server communication
+- A game simulation with memory allocation and client-server communication using C.
 
-# List of source:
+# List of sources:
 
 -   main.c
 -   connect.c
@@ -32,4 +32,4 @@
 
 -   To launch the **server** version of the compiled code, enter `./a5` into the same terminal in the same directory.
 -   To launch the **client** version of the compiled code, enter `./a5 {ip-address of server}` into another terminal in the same directory.
-    -   The ip address if run locally is 127.0.0.1
+    -   The IP address if run locally, is 127.0.0.1
