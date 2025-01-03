@@ -3,24 +3,31 @@
 -   Name: Ethan Abraham
 -   Student Number: 101324864
 
-# Purpose
+## **Dynamic Participant Flyer Simulation**  
+A C Programming Assignment  
 
-- A game simulation with memory allocation and client-server communication using C.
+### **Overview**  
+This project implements a dynamic simulation of participants and a flyer in a 2D world. The program leverages modular C design with distinct source files for various functionalities like movement, hero control, and escape logic. It's a part of an academic assignment focusing on multi-file C programming and modular design principles.
 
-# List of sources:
+### **Features**  
+- **Dynamic World Simulation**: Tracks and updates the state of participants and flyers.  
+- **Modular Design**: Each functionality is separated into reusable and readable modules.  
+- **Optimized for Performance**: Built with efficiency in handling real-time updates.  
+- **Error Handling**: Designed to manage edge cases gracefully.  
 
--   main.c
--   connect.c
--   escape.c
--   flyer.c
--   hero.c
--   hollow.c
--   participant.c
--   view.c
+### **File Structure**  
+- **`connect.c`**: Handles the connection and interactions between modules.  
+- **`defs.h`**: Defines shared constants, macros, and data structures.  
+- **`escape.c`**: Implements escape logic for participants in the simulation.  
+- **`flyer.c`**: Manages the behavior and state of the flyer.  
+- **`hero.c`**: Logic for the "hero" character's interaction within the simulation.  
+- **`hollow.c`**: Implements hollow zone logic, possibly a part of environmental constraints.  
+- **`main.c`**: Entry point of the program; initializes and runs the simulation loop.  
+- **`participant.c`**: Handles participant movement, states, and updates.  
+- **`view.c`**: Manages the visual output of the simulation.   
 
-# Header files:
-
--   defs.h
+### **Acknowledgments**  
+This project was developed as part of a programming course at Carleton University.
 
 # Compilation and launch Instructions:
 
