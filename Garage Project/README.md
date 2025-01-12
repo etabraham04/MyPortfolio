@@ -1,7 +1,7 @@
 # Assignment 3: Garage Management System
 
 ## Project Overview
-This project implements a **Garage Management System** designed to manage entities like cars, customers, mechanics, and repairs. The system is built using C++ with a modular approach, making it easy to maintain and extend. It includes a Python script (`classa1.py`) and a UML diagram for visualization of the system design.
+This project implements a **Garage Management System** designed to manage entities like cars, customers, mechanics, and repairs. The system is built using C++ with a modular approach, making it easy to maintain and extend. It includes a UML diagram for visualization of the system design.
 
 ## File Descriptions
 Here is a breakdown of the files included in the project:
