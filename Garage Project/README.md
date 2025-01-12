@@ -70,11 +70,3 @@ The test cases ensure that all major functionalities are working as expected. Sp
 
 ### Expected Output
 When running the tests, the system provides detailed feedback for each test case, indicating whether it passed or failed. For failed tests, error messages specify the issue, making it easier to debug. A summary of the test results is displayed at the end, showing the total number of tests run, passed, and failed.
-
-## Future Improvements
-- Add a graphical user interface for better user interaction.
-- Extend functionality for more comprehensive garage management features.
-- Integrate a database for persistent storage of cars, customers, and repair records.
-
----
-Feel free to explore the code and modify it to suit your needs. If you encounter any issues or have suggestions, please contribute or reach out!
