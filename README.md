@@ -8,68 +8,87 @@ This repository showcases my journey as a **developer, learner, and contributor*
 ---
 
 ## 📄 About Me  
-- 👨‍💻 **Current Role**: Third-year Computer Science student (Co-op Option)  
+- 👨‍💻 **Current Role**: Firmware Developer Co-op at Curtiss Wright Defense  
 - 🏫 **Education**: Bachelor of Computer Science (AI & Machine Learning)  
-  - GPA: **11.5/12 (A)**  
+  - GPA: **11.2/12 (A Range)**  
+  - Awards: **Dunton Award Scholarship** 
   - Expected Graduation: **April 2027**  
-- 🎯 **Availability**: Open for an **8-month co-op** (Jan – Aug 2026)  
+- 🎯 **Availability**: Available **4 Months** (May – August 2026)  
 - 📍 **Location**: Ottawa, ON (Home: Mississauga, ON)  
 
 ---
 
 ## 💼 Work Experience  
 
-### 🚗 Test/Automation Developer Intern — *Ford Motor Company* (May 2025 – Aug 2025)  
-- 🐍 Developed a **Python tool** to parse API data, reducing analysis time to <20 min.  
-- 🛠️ Engineered a **test fixture** for automated crash dump detection & logging.  
-- 🔧 Refactored legacy code, resolving **SonarQube** issues & improving maintainability.  
-- 📑 Authored **technical docs & UML diagrams** for hardware/software workflows.  
-- 🎤 Presented automation project results in **technical talks** to engineering teams.  
+### 🛡️ Firmware Developer Co-op — *Curtiss Wright Defense* (Jan 2026 – Apr 2026)  
+- 💾 Developed and tested embedded software, including **Firmware (U-boot, UEFI)** and **Board Support Packages (BSPs)** for single board computers using **C** and **C++**.  
+- 🏎️ Designed and implemented device drivers for **Linux** and **VxWorks** Real-Time Operating Systems (RTOS), ensuring optimal performance on Intel and ARM architectures.  
+- 🧪 Executed manual and automated test procedures for network switches and embedded systems, utilizing **Python** scripting and **Git** for version control.  
+- 🤝 Collaborated with hardware engineers to integrate and debug systems, while documenting test procedures and user guides in **Jira** and **Confluence**.  
 
-### 📊 Data Analytics / Visualization Support — *Shared Services Canada* (Sept 2024 – Jan 2025)  
-- 📝 Prepared **approval slides** with scope, timelines & architecture for stakeholders.  
-- 🏗️ Led an **Agile project**, contributing across sprint planning, UAT, and deployment.  
-- 📈 Built **Power BI reports** for ITSM ticket tracking, improving transparency.  
-- 🌍 Designed a **global semantic model**, resolving branch-wide data flow issues.  
+### 🚗 Test/Automation Developer Intern — *Ford Motor Company* (May 2025 – Aug 2025)  
+- ⚙️ Optimized automated test fixtures using **Jenkins, Python, and pytest**, reducing runtime and improving reliability.  
+- 📊 Developed Python **REST API** tools and **API wrapper classes** to parse diagnostic data for **Power BI** dashboards.  
+- 🔍 Built validation systems for crash logs with **SonarQube, log debugging, and core dump analysis**, improving defect classification.  
+- 🐞 Debugged **ECU-based embedded systems** and integrated workflows across hardware/software teams in **Agile** sprints.  
+
+### 📊 Data Analytics / Visualization Developer — *Shared Services Canada* (Sept 2024 – Jan 2025)  
+- 📈 Developed and delivered **Power BI** dashboards with data from **SQL** and **Python**, enhancing ITSM ticket tracking.  
+- 🌍 Designed a global semantic data model and performed **data modeling/component design**, resolving system inconsistencies.  
+- 📱 Built custom solutions in **PowerApps** to streamline reporting workflows and reduce manual work.  
+- 🗣️ Led Agile ceremonies (sprint planning, UAT) and drove **requirements gathering**, documentation, and stakeholder approvals.  
 
 ### ☁️ Project Delivery / Software Development Intern — *Prodapt* (Jun 2024 – Aug 2024)  
-- 🔄 Supported migration of **Telus’ billing system to GCP**, boosting scalability.  
-- 📅 Built **Agile delivery plans**, raising team productivity by **20%**.  
-- 🤝 Actively engaged in **Agile workflows** (sprints, stand-ups, retrospectives).  
+- 🔄 Migrated Telus’ postpaid billing system to **Google Cloud Platform (GCP)**.  
+- 🚀 Improved team efficiency by **20%** through **Agile-based delivery planning**, project tracking, and cross-functional collaboration.  
 
 ---
 
 ## 🔨 Featured Projects  
 
+### 📚 HinLIBS - Library Management System *(C++, Qt, SQLite, SQL)*  
+- Designed a multi-page GUI application using **C++** and **Qt Widgets** for managing library operations.  
+- Engineered a robust architecture with **polymorphism** to handle diverse catalogue items and user roles.  
+- Developed a custom **DBManager** class to handle persistent storage with **SQLite**, implementing complex **SQL** queries.  
+- Implemented **Role-Based Access Control (RBAC)** to restrict administrative features.  
+
+### 👁️ Robust Image Classifier & OOD Detector *(Python, PyTorch, Computer Vision)*  
+- Developed a **ResNet-18** based classification system to identify 10 object categories while rejecting **Out-of-Distribution (OOD)** inputs.  
+- Implemented a semi-supervised learning strategy using unlabeled data to distinguish known vs. unknown domains.  
+- Engineered a custom inference pipeline with **Test-Time Augmentation (TTA)** to improve reliability.  
+- Optimized convergence using **Cosine Annealing** scheduling and **Label Smoothing**.  
+
+### 💧 Intelligent Fuzzy Logic Irrigation System *(Python, NumPy, Fuzzy Logic)*  
+- Developed an automated decision support system to optimize agricultural water usage using **Fuzzy Logic**.  
+- Implemented a multi-variable controller processing inputs like ground saturation, temperature, and weather data.  
+- Engineered a modular rule-based inference engine with logic tracks for different plant types and safety overrides.  
+- Built a comprehensive simulation suite to validate rule accuracy across edge-case weather scenarios.  
+
+### 🛠️ Automated Diagnostic Parsing Tool *(Python, REST APIs)*  
+- *Developed at Ford Motor Company internship to automate crash log parsing and reliability tracking.*  
+- Built a **Python script** to fetch, parse, and aggregate diagnostic data via REST API with async requests.  
+- Implemented pattern matching to classify crash types from stack trace signatures.  
+- Optimized runtime by **90%** (4 hrs → 20 mins) through algorithm analysis.  
+
 ### 🚗 Garage Management System *(C++, Modular Design)*  
-- Built a modular system to manage **cars, customers, mechanics, repairs**.  
-- Designed reusable **C++ classes** for maintainability & extensibility.  
-- ✅ Tested thoroughly with **unit & integration tests**.  
+- Implemented a modular system to manage cars, customers, mechanics, and repairs.  
+- Developed clear, maintainable **C++ classes** (Car, Customer, Mechanic, Repair).  
+- Verified system reliability with **unit and integration testing**.  
 
-### 🎮 Hollow Escape *(C, TCP/IP, Linux)*  
-- Designed a **client-server escape game** with real-time communication.  
-- Handled multiple clients using **sockets & event-driven architecture**.  
-- Optimized **memory management** using advanced C structures.  
+### 📝 DARRT (Data Analytics Report Request Tool) *(PowerApps, Agile)*  
+- *Enterprise project at Shared Services Canada.*  
+- Built custom **PowerApps** components to streamline reporting workflows.  
+- Gathered and prioritized requirements via stakeholder interviews and oversaw the end-to-end development lifecycle.  
 
-### 🎨 OpenGallery *(Node.js, Express, MongoDB, JavaScript)*  
-- Developed a **full-stack platform** for artists to showcase their work.  
-- Designed a **MongoDB schema** for users, artworks & commissions.  
-- Implemented a **secure REST API** and responsive frontend.  
+### 🎮 Hollow Escape Game *(C, TCP/IP, Linux)*  
+- Designed and implemented a real-time **client-server** escape game using **C** and **TCP/IP**.  
+- Utilized **server sockets** to manage connections and broadcast game state.  
+- Implemented efficient **memory management** and structured data storage.  
 
-### 📚 HinLIBS - Library System *(C++, Qt, SQLite)*  
-- Developed a **comprehensive library management system** with role-based access.  
-- Built a **GUI with Qt Widgets** featuring catalogue browsing and account management.  
-- Integrated **SQLite database** for persistent storage of patrons and inventory.  
-
-### 💧 Intelligent Fuzzy Logic Irrigation *(Python, AI)*  
-- Designed a **Decision Support System** to optimize agricultural water usage.  
-- Implemented **Fuzzy Logic algorithms** to process weather and soil data.  
-- Integrated **Google Weather API** for real-time environmental inputs.  
-
-### 👁️ Robust Image Classifier *(Python, PyTorch, ResNet)*  
-- Built a **Deep Learning model** capable of detecting **Out-Of-Distribution (OOD)** inputs.  
-- Utilized **Test-Time Augmentation (TTA)** to improve prediction reliability.  
-- Customized a **ResNet18 backbone** to include an explicit rejection class.  
+### 🎨 OpenGallery *(Node.js, Express, MongoDB)*  
+- Developed a **full-stack platform** for artists to publish and showcase artwork.  
+- Designed **MongoDB schema** to handle complex relationships efficiently.  
+- Implemented secure backend and interactive frontend for smooth UX.  
 
 ---
 
@@ -87,25 +106,36 @@ This repository showcases my journey as a **developer, learner, and contributor*
 Scheme | Prolog  
 
 **Frameworks & Libraries:**  
-PowerApps • Node.js • Express • React • Pug • MongoDB  
+Node.js • Express • MongoDB • PowerApps • pytest • Qt • PyTorch • Unix Shell  
 
-**Tools & Platforms:**  
-Power BI • Git/GitHub • Linux • Unix Shell • Microsoft 365 • JIRA • Makefile  
+**Tools:**  
+Jenkins • Git/GitHub • JIRA • Power BI • CI/CD • SonarQube • Atlassian Suite • VS Code • Docker • Makefile  
 
-**Concepts:**  
-RESTful API Design • Frontend–Backend Integration • Database Design • Client–Server Communication • Debugging  
+**Systems & Testing:**  
+Linux • VxWorks • Embedded Systems • ECU • Runtime/Core Dump Analysis • Test Automation • REST APIs • Functional Testing  
+
+---
+
+## 🏆 Certifications & Achievements  
+
+### 🎖️ Project Leadership Recognition — *Shared Services Canada (Dec 2024)*  
+- Led the development of the Data Analytics Report Request Tool (DARRT).  
+- Praised by leadership for proactive problem-solving and high-quality deliverables.  
+
+### 📜 Google IT Automation with Python — *Coursera (2020 – 2021)*  
+- Completed 6-course specialization covering Python, Git, debugging, cloud, and OS automation.  
 
 ---
 
 ## 🎓 Extracurriculars  
 
-### 🔐 Carleton Cybersecurity Club (Jan 2024 – Present)  
-- Attended lectures on **threat landscapes & cybersecurity trends**.  
-- Hands-on workshops: **network security, cryptography, penetration testing**.  
-
 ### 🏎️ Raven Racing Team (Jan 2023 – Nov 2024)  
-- Designed & built a **Formula SAE vehicle** for competition.  
-- Worked with cross-functional teammates to **optimize design efficiency**.  
+- Contributed to the design and construction of a **Formula SAE vehicle**, focusing on drivetrain and power management.  
+- Collaborated with cross-functional teammates to optimize **design efficiency**.  
+- Applied engineering principles in construction and testing phases.  
+
+### 🔐 Carleton Cybersecurity Club (Jan 2024 – Present)  
+- Participating in workshops on network security, cryptography, and penetration testing.  
 
 ---
 
