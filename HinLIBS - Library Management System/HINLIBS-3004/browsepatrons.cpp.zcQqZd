@@ -1,0 +1,179 @@
+#include "browsepatrons.h"
+#include "ui_browsepatrons.h"
+
+
+#include <QObject>
+#include <QScrollArea>
+#include <QLabel>
+#include <QPushButton>
+#include <QDate>
+#include <QHeaderView>
+#include <magazine.h>
+
+
+browsePatrons::browsePatrons(QWidget *parent, DBManager* db) :
+    QDialog(parent), ui(new Ui::browsePatrons), dbManager(db)
+{
+    ui->setupUi(this);
+    loadPatrons();
+}
+
+browsePatrons::~browsePatrons()
+{
+    delete ui;
+}
+
+void browsePatrons::loadPatrons()
+{
+
+    // Get the scroll area
+    QScrollArea* scrollArea = findChild<QScrollArea*>("scrollArea");
+    QWidget* scrollWidget = scrollArea->widget();
+
+    // Clear existing layout
+    if (scrollWidget->layout()) {
+        QLayoutItem* child;
+        while ((child = scrollWidget->layout()->takeAt(0)) != nullptr) {
+            delete child->widget();
+            delete child;
+        }
+        delete scrollWidget->layout();
+    }
+
+    // Create new layout for items
+    QVBoxLayout* itemsLayout = new QVBoxLayout(scrollWidget);
+
+    // Example list of users
+    User* a1(new Admin("admin1", "oozmakappa"));
+    User* l1(new Librarian("librarian1", "oozmakappa"));
+    User* p1(new Patron("Mike", "0001", "mike@email.com",  1));
+    User* p2(new Patron("Sulley", "0002", "sullley@email.com",  2));
+    User* p3(new Patron("DonCarleton", "0003", "doncarleton@email.com",  3));
+    User* p4(new Patron("TerryTerri", "0004", "TerryTerri@email.com",  4));
+    User* p5(new Patron("ScottSquishy", "0005", "ScottSquishy@email.com",  5));
+    std::vector<User*> allUsers = {a1, l1, p1, p2, p3, p4, p5};
+
+    for (User* user : allUsers) {
+        if (user->getUserType() == "Patron") {
+            std::cout << "Creating patron: " << std::endl;
+
+            QWidget* userWidget = new QWidget();
+            userWidget->setStyleSheet("background-color: #9ebe41; border-radius: 10px; margin: 1px; padding: 20px; font-family: Deja Vu Serif");
+            userWidget->setMinimumHeight(180);
+
+            QHBoxLayout* userLayout = new QHBoxLayout(userWidget);
+
+            QVBoxLayout* infoLayout = new QVBoxLayout();
+
+            QLabel* usernameLabel = new QLabel(QString::fromStdString(user->get_username()));
+            usernameLabel->setStyleSheet("font-weight: bold; font-size: 11pt; color: #364e1b;");
+            infoLayout->addWidget(usernameLabel);
+
+            // View Account button
+            QPushButton* viewAccount = new QPushButton("View Account");
+            viewAccount->setStyleSheet(
+                "QPushButton {"
+                "    background-color: #384b06;"
+                "    color: white;"
+                "    padding: 8px 12px;"
+                "    border-radius: 5px;"
+                "    font-size: 11px;"
+                "    font-weight: bold;"
+                "    border: 2px solid #2a3a05;"
+                "}"
+                "QPushButton:hover {"
+                "    background-color: #2a3a05;"
+                "    border: 2px solid #1a2a03;"
+                "}"
+                "QPushButton:pressed {"
+                "    background-color: #1a2a03;"
+                "    padding: 7px 11px;"
+                "}"
+            );
+            viewAccount->setFixedSize(120, 35);
+            viewAccount->setCursor(Qt::PointingHandCursor); // Shows the hand cursor when hovered over button
+
+            connect(viewAccount, &QPushButton::clicked, this, [this, user]() {
+                emit viewAccountRequested(dynamic_cast<Patron*>(user));
+            });
+
+//            std::vector<CatalogueItem*> loansVector = dbManager->getLoanedItems(dynamic_cast<Patron*>(user));
+            CatalogueItem* m1(new Magazine("National Geographic", "National Geographic Society", 2023, 112233445, "Magazine", "New", "Available", 2023, "January 2023"));
+            CatalogueItem* m2(new Magazine("TIME", "TIME Magazine", 2023, 223344556, "Magazine", "Good", "Available", 1123, "February 2023"));
+            CatalogueItem* m3(new Magazine("The Economist", "The Economist Group", 2023, 334455667, "Magazine", "Fair", "Available", 3421, "March 2023"));
+            std::vector<CatalogueItem*> loansVector = {m1, m2, m3};
+
+            QTableWidget* loansTableWidget = new QTableWidget();
+            loansTableWidget->clearContents();
+            loansTableWidget->setRowCount(loansVector.size());
+            loansTableWidget->setColumnCount(3);
+            loansTableWidget->clearSpans();
+            int row = 0;
+            for (CatalogueItem* item : loansVector)
+            {
+                // Get loan data
+                QString title = QString::fromStdString("item title");
+//                QString dueDateStr = QString::fromStdString(dbManager->getLoan(item)->getDueDate());
+
+//                QDate dueDate = QDate::fromString(dueDateStr, "yyyy-MM-dd");
+//                QDate currentDate = QDate::currentDate();
+//                qint64 daysLeft = currentDate.daysTo(dueDate);
+
+                //create table item
+                QTableWidgetItem *titleItem = new QTableWidgetItem(title);
+                QTableWidgetItem *dueDateItem = new QTableWidgetItem("2025-09-27"); //dueDate.toString("yyyy-MM-dd")dueDate.toString("yyyy-MM-dd")
+                QTableWidgetItem *daysLeftItem = new QTableWidgetItem("12");
+
+                loansTableWidget->setItem(row, 0, titleItem);
+                loansTableWidget->setItem(row, 1, dueDateItem);
+                loansTableWidget->setItem(row, 2, daysLeftItem);
+
+                row++;
+            }
+            // View Item button
+            QPushButton* viewItem = new QPushButton("View Account");
+            viewItem->setStyleSheet(
+                "QPushButton {"
+                "    background-color: #384b06;"
+                "    color: white;"
+                "    padding: 8px 12px;"
+                "    border-radius: 5px;"
+                "    font-size: 11px;"
+                "    font-weight: bold;"
+                "    border: 2px solid #2a3a05;"
+                "}"
+                "QPushButton:hover {"
+                "    background-color: #2a3a05;"
+                "    border: 2px solid #1a2a03;"
+                "}"
+                "QPushButton:pressed {"
+                "    background-color: #1a2a03;"
+                "    padding: 7px 11px;"
+                "}"
+            );
+            viewItem->setFixedSize(200,50);
+            viewItem->setCursor(Qt::PointingHandCursor); // Shows the hand cursor when hovered over button
+
+            connect(viewAccount, &QPushButton::clicked, this, [this, user]() {
+                emit viewAccountRequested(dynamic_cast<Patron*>(user));
+            });
+
+            loansTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+            loansTableWidget->setMinimumHeight(150);
+
+            infoLayout->addWidget(viewAccount);
+            userLayout->addLayout(infoLayout);
+            userLayout->addWidget(loansTableWidget);
+            userLayout->addWidget(viewItem);
+            userWidget->setLayout(userLayout);
+
+            itemsLayout->addWidget(userWidget);
+        }
+    }
+
+    scrollWidget->setLayout(itemsLayout);
+
+
+
+    itemsLayout->addStretch();
+}

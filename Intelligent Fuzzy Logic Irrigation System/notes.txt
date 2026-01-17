@@ -1,0 +1,25 @@
+Weather API to use: 
+Google API Key: AIzaSyAM6cIw0l8o5oTIpwaCDY0Ij8e1QDxtY1s
+
+Call for weather: https://weather.googleapis.com/v1/forecast/days:lookup?key=YOUR_API_KEY&location.latitude=LATITUDE&location.longitude=LONGITUDE
+
+
+JSON Input Example
+{
+    "ground_saturation": [0-100],
+    "day_temp": 24.3,
+    "night_temp": 11.5,
+    "humidity": 84,
+    "PoP": 55
+}
+
+ground_saturation = made up percentages to sim sensor
+day_temp = weatherjson[0].get(maxTemperature).get(degrees)
+night_temp = weatherjson[0].get(minTemperature).get(degrees)
+unit = night_temp = weatherjson[0].get(maxTemperature).get(unit)
+humidity = (weatherjson[0].get(daytimeForecast).get(relativeHumidity) 
+            + weatherjson[0].get(nighttimeForecast).get(relativeHumidity)) 
+            / 2
+PoP = (weatherjson[0].get(daytimeForecast).get(precipitation).get(probability).get(percent) 
+        + weatherjson[0].get(nighttimeForecast).get(precipitation).get(probability).get(percent))
+        / 2

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>viewitem</class>
+ <widget class="QWidget" name="viewitem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>956</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="ViewItempage" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>811</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Serif</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #384b06;</string>
+   </property>
+   <widget class="QWidget" name="detailsBG" native="true">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>50</y>
+      <width>671</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #face23;</string>
+    </property>
+    <widget class="QWidget" name="itemDetailsContainer" native="true">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>100</y>
+       <width>511</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #9ebe41;
+border-radius: 15px</string>
+     </property>
+     <widget class="QLabel" name="titleLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>441</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #3A4500;
+font-weight: bold;
+font-size: 15px;</string>
+      </property>
+      <property name="text">
+       <string>title</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="authorLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>211</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>author</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="formatLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>format</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statusLabel">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>80</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold;
+color: #3A4500</string>
+      </property>
+      <property name="text">
+       <string>status</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="buttonRow" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>240</y>
+       <width>631</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="cancelHoldButton">
+        <property name="font">
+         <font>
+          <family>DejaVu Serif</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: #3A4500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+QPushButton:hover {
+  background-color: #4F5D00;
+}
+QPushButton:disabled {
+        background-color: rgb(125, 132, 109);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Cancel Hold</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="applyHoldButton">
+        <property name="font">
+         <font>
+          <family>DejaVu Serif</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: #3A4500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+QPushButton:hover {
+  background-color: #4F5D00;
+}
+QPushButton:disabled {
+        background-color: rgb(125, 132, 109);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Apply Hold</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="checkInButton">
+        <property name="font">
+         <font>
+          <family>DejaVu Serif</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: #3A4500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+QPushButton:hover {
+  background-color: #4F5D00;
+}
+QPushButton:disabled {
+        background-color: rgb(125, 132, 109);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Check in</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="checkOutButton">
+        <property name="font">
+         <font>
+          <family>DejaVu Serif</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: #3A4500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+QPushButton:hover {
+  background-color: #4F5D00;
+}
+QPushButton:disabled {
+        background-color: rgb(125, 132, 109);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Check out</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <zorder>buttonRow</zorder>
+    <zorder>itemDetailsContainer</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

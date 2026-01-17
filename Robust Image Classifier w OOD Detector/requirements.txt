@@ -1,0 +1,9 @@
+--index-url https://download.pytorch.org/whl/cu130
+--extra-index-url https://pypi.org/simple
+
+# PyTorch CUDA 12.4 wheels (installed automatically via index above)
+torch
+torchvision
+torchaudio
+numpy
+matplotlib

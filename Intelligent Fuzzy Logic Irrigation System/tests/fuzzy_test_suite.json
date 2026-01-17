@@ -1,0 +1,478 @@
+[
+  {
+    "scenario": "Global Stop: Cold Day Temp",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 2,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: Cold Night Temp",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 12,
+      "night_temp": 0,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: High Rain Probability",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 80
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: Saturated Ground",
+    "inputs": {
+      "ground_saturation": 90,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Ornamentals Rule 1: Moist Ground",
+    "inputs": {
+      "ground_saturation": 50,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Ornamentals Rule 2: Very Dry, Hot Day, No Rain",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 35,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Long",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Ornamentals Rule 3: Very Dry, Warm Day, No Rain",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Medium",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Ornamentals Rule 4: Dry, Hot Day, Dry Humidity",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 35,
+      "night_temp": 15,
+      "humidity": 20,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Short",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Ornamentals Rule 5: Dry, Cool Day",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 12,
+      "night_temp": 5,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Medium"
+    }
+  },
+  {
+    "scenario": "Ornamentals Rule 6: Very Dry, Low Rain Chance",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 25
+    },
+    "expected_output": {
+      "ornamentals": "Short",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Vegetables Rule 1: Very Dry, No Rain",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Medium",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Vegetables Rule 2: Dry, Hot Day, No Rain",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 35,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Vegetables Rule 3: Dry, Warm Day, No Rain",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Medium"
+    }
+  },
+  {
+    "scenario": "Vegetables Rule 4: Moist, Hot Day, Dry Humidity",
+    "inputs": {
+      "ground_saturation": 50,
+      "day_temp": 35,
+      "night_temp": 15,
+      "humidity": 20,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Short"
+    }
+  },
+  {
+    "scenario": "Vegetables Rule 5: Moist, Cool Day",
+    "inputs": {
+      "ground_saturation": 50,
+      "day_temp": 12,
+      "night_temp": 5,
+      "humidity": 50,
+      "PoP": 5
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Vegetables Rule 6: Dry, Low Rain Chance",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 25
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Short"
+    }
+  },
+  {
+    "scenario": "Global Stop: Partial Cold Day (7 C)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 7,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: Cold Night (-1 C)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 15,
+      "night_temp": -1,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: Wet Ground Strong (70%)",
+    "inputs": {
+      "ground_saturation": 70,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: High Rain Weak (36% PoP)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 36
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: High Rain Moderate (45% PoP)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 20,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 45
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Global Stop: High Rain Strong (100% PoP)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 25,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 100
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Ornamental Rule 2 Boundary (Hot at 34 C)",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 34,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Long",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Ornamental Rule 3 Boundary (Warm/Cool Edge 16 C)",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 16,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Medium",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Ornamental Rule 4 Humidity Dry Boundary (30% Humidity)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 25,
+      "night_temp": 15,
+      "humidity": 30,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Short",
+      "vegetables": "Medium"
+    }
+  },
+  {
+    "scenario": "Ornamental Rule 5 Cool Peak (12 C Day)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 12,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Medium"
+    }
+  },
+  {
+    "scenario": "Ornamental Rule 6 Low Chance Plateau (PoP 20%)",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 25,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 20
+    },
+    "expected_output": {
+      "ornamentals": "Short",
+      "vegetables": "None"
+    }
+  },
+  {
+    "scenario": "Vegetable Rule 2 Night Hot Boundary (21 C Night)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 25,
+      "night_temp": 21,
+      "humidity": 20,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Short",
+      "vegetables": "Medium"
+    }
+  },
+  {
+    "scenario": "Vegetable Rule 4 Moist Hot Dry Humidity",
+    "inputs": {
+      "ground_saturation": 50,
+      "day_temp": 34,
+      "night_temp": 15,
+      "humidity": 20,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Short"
+    }
+  },
+  {
+    "scenario": "Vegetable Rule 6 Dry Low Chance Plateau (PoP 30%)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 25,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 30
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Short"
+    }
+  },
+  {
+    "scenario": "Low Chance Rain Alone (No Effect)",
+    "inputs": {
+      "ground_saturation": 30,
+      "day_temp": 25,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 30
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "Short"
+    }
+  },
+  {
+    "scenario": "Warm vs Hot Boundary (33 C Day)",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 33,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Medium",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Very Dry Cool Day (10 C Day)",
+    "inputs": {
+      "ground_saturation": 10,
+      "day_temp": 10,
+      "night_temp": 10,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "Medium",
+      "vegetables": "Long"
+    }
+  },
+  {
+    "scenario": "Non-Stop Moist Warm Normal Humidity",
+    "inputs": {
+      "ground_saturation": 50,
+      "day_temp": 32,
+      "night_temp": 15,
+      "humidity": 50,
+      "PoP": 0
+    },
+    "expected_output": {
+      "ornamentals": "None",
+      "vegetables": "None"
+    }
+  }
+]

@@ -56,6 +56,21 @@ This repository showcases my journey as a **developer, learner, and contributor*
 - Designed a **MongoDB schema** for users, artworks & commissions.  
 - Implemented a **secure REST API** and responsive frontend.  
 
+### 📚 HinLIBS - Library System *(C++, Qt, SQLite)*  
+- Developed a **comprehensive library management system** with role-based access.  
+- Built a **GUI with Qt Widgets** featuring catalogue browsing and account management.  
+- Integrated **SQLite database** for persistent storage of patrons and inventory.  
+
+### 💧 Intelligent Fuzzy Logic Irrigation *(Python, AI)*  
+- Designed a **Decision Support System** to optimize agricultural water usage.  
+- Implemented **Fuzzy Logic algorithms** to process weather and soil data.  
+- Integrated **Google Weather API** for real-time environmental inputs.  
+
+### 👁️ Robust Image Classifier *(Python, PyTorch, ResNet)*  
+- Built a **Deep Learning model** capable of detecting **Out-Of-Distribution (OOD)** inputs.  
+- Utilized **Test-Time Augmentation (TTA)** to improve prediction reliability.  
+- Customized a **ResNet18 backbone** to include an explicit rejection class.  
+
 ---
 
 ## ⚡ Technical Skills  
